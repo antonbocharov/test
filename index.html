@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sport survey</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1 id="title"> </h1>
+<div id="form-outer">
+ <p id= "description"> </p>
+ <form id="survey form" method="GET" action= "">
+  <div class="rowTab">
+   <div class="labels">
+    <label id ="name-label" for ="name">*Name:</label>
+   </div>
+   <div class="rightTab">
+    <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+   </div>
+  </div>
+  <div class="rowTab">
+   <div class="labels">
+    <label id="email-label" for="email">*Email</label>
+   </div>
+   <div class="rightTab">
+    <input autofocus type="email" name="email" id="email" class="input-field" placeholder="Enter your Email" required>
+   </div>
+  </div>
+  <div class="rowTab">
+   <div class="labels">
+    <label id="number-label" for="age">*Age</label>
+   </div>
+   <div class="rightTab">
+    <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Age" required>
+   </div>
+  </div>
+  <div class="rowTab">
+   <div class="labels">
+    <label  for="currentPos">Which option describes your current expirience?</label>
+   </div>
+   <div class="rightTab">
+    <select id="dropdown" class="dropdown" name="dropdown">
+      <option disabled value>Select an option</option>
+      <option value="">Expirienced</option>
+      <option value="">Champion</option>
+      <option value="">Prefer not to say</option>
+      <option value="">Other</option>
+    </select>
+   </div>
+   </div>
+   <div class="rowTab">
+    <div class="labels">
+     <label id="userRating" for="userRating">Would you recommend us to a friend?</label>
+    </div>
+    <div class="rightTab">
+      <ul sytle="list-style: none;">
+        <li class="radio"> <label> Definitely<input name="radio-buttons" value="1" type="radio" class="userRatings"></label> </li>
+        <li class="radio"> <label> Maybe<input name="radio-buttons" value="2" type="radio" class="userRatings"></label> </li>
+        <li class="radio"> <label> Absolutely no<input name="radio-buttons" value="3" type="radio" class="userRatings"></label> </li>
+      </ul>
+    </div>
+   </div>
+   <div class="rowTab">
+    <div class="labels">
+     <label id="mostlike" for="mostlike">What sport are you interested in?</label>
+    </div>
+    <div class="rightTab">
+      <select id="mostlike" class="mostlike" name="mostlike">
+        <option disabled value>Select an option</option>
+        <option value="">Football</option>
+        <option value="">Athletics</option>
+        <option value="">Box</option>
+        <option value="">Swimming</option>
+      </select>
+    </div>
+   </div>
+   <div class="rowTab">
+    <div class="labels">
+     <label id="userRating" for="userRating">Things that you like most in sport</label>
+    </div>
+    <div class="rightTab">
+      <ul id="preferences" sytle="list-style: none;">
+        <li class="checkbox"> <label><input name="prefer" value="1" type="checkbox" class="userRatings"> Challenges</label> </li>
+        <li class="checkbox"> <label><input name="prefer" value="2" type="checkbox" class="userRatings"> Teamplay</label> </li>
+        <li class="checkbox"> <label><input name="prefer" value="3" type="checkbox" class="userRatings"> Competition</label> </li>
+        <li class="checkbox"> <label><input name="prefer" value="4" type="checkbox" class="userRatings"> Goals</label> </li>
+        <li class="checkbox"> <label><input name="prefer" value="5" type="checkbox" class="userRatings"> Training</label> </li>
+        <li class="checkbox"> <label><input name="prefer" value="6" type="checkbox" class="userRatings"> Watching it</label> </li>
+      </ul>
+    </div>
+   </div>
+   <div class="rowTab">
+    <div class="labels">
+     <label id="mostlike" for="mostlike">What sport are you interested in?</label>
+    </div>
+    <div class="rightTab">
+      <textarea id="comments" class="input-field"  name="comment" placeholder="Enter your comment here..."></textarea>
+    </div>
+   </div>
+   <button type="submit" id="submit">Submit</button>
+
+ </form>
+</div>
+</body>
