@@ -4,61 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Loop 1 - Step 1</title>
+  <title>Sport survey</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="modal.css" />
- 
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="choices">
-
-     <div id="mobile" class="choice " onclick="showMobile('.modal')">
-       <img src="/img/device.svg" class="device" alt="smartphone icon" height="150px" width="100px" />
-       <h1>MOBILE</h1>
-       <p>
-       Get notifications about new releases in our mobile app.
-       </p>
-       <div class="price"><sup>$</sup><b>10</b> <span>/month</span></div>
-     </div>
-
-     <div id="desktop" class="choice " onclick="showDesktop('.modal')">
-        <img src="/img/laptop.svg" class="device" alt="laptop icon" height="150px" width="100px" />
-       <h1>DESKTOP</h1>
-       <p>
-       Enjoy new episodes on your laptop in browser with our web service, 
-       which supports all the platforms.
-       </p>
-       <div class="price"><sup>$</sup><b>15</b> <span>/month</span></div>
-     </div>
-     <div id="tv" class="choice " onclick="showTv('.modal')">
-        <img src="/img/monitor.svg" class="device" alt="TV icon" height="150px" width="100px" />
-       <h1>TV</h1>
-       <p>Watch your favorite series at home on large screen with our TV 
-       application.
-       </p>
-      <div class="price"><sup>$</sup><b>20</b> <span>/month</span></div>
-     </div>
-     </div>
-  </div>
-   <!-- Modal-->
-   <div class="modal" id="popup" >
-     <div id="result" class="modal-content">
-      
-     </div>
+<h1 id="title"> </h1>
+<div id="form-outer">
+ <p id= "description"> </p>
+ <form id="survey form" method="GET" action= "">
+  <div class="rowTab">
+   <div class="labels">
+    <label id ="name-label" for ="name">*Name:</label>
    </div>
-  <!--
-    Welcome to your first asset!
+   <div class="rightTab">
+    <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+   </div>
+  </div>
+  <div class="rowTab">
+   <div class="labels">
+    <label id="email-label" for="email">*Email</label>
+   </div>
+   <div class="rightTab">
+    <input autofocus type="email" name="email" id="email" class="input-field" placeholder="Enter your Email" required>
+   </div>
+  </div>
+  <div class="rowTab">
+   <div class="labels">
+    <label id="number-label" for="age">*Age</label>
+   </div>
+   <div class="rightTab">
+    <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Age" required>
+   </div>
+  </div>
+  <div class="rowTab">
+   <div class="labels">
+    <label  for="currentPos">Which option describes your current expirience?</label>
+   </div>
+   <div class="rightTab">
+    <select id="dropdown" class="dropdown" name="dropdown">
+      <option disabled value>Select an option</option>
+      <option value="">Expirienced</option>
+      <option value="">Champion</option>
+      <option value="">Prefer not to say</option>
+      <option value="">Other</option>
+    </select>
+   </div>
+   </div>
+   <div class="rowTab">
+    <div class="labels">
+     <label id="userRating" for="userRating">Would you recommend us to a friend?</label>
+    </div>
+    <div class="rightTab">
+      <ul sytle="list-style: none;">
+        <li class="radio"> <label> Definitely<input name="radio-buttons" value="1" type="radio" class="userRatings"></label> </li>
+        <li class="radio"> <label> Maybe<input name="radio-buttons" value="2" type="radio" class="userRatings"></label> </li>
+        <li class="radio"> <label> Absolutely no<input name="radio-buttons" value="3" type="radio" class="userRatings"></label> </li>
+      </ul>
+    </div>
+   </div>
+   <div class="rowTab">
+    <div class="labels">
+     <label id="mostlike" for="mostlike">What sport are you interested in?</label>
+    </div>
+    <div class="rightTab">
+      <select id="mostlike" class="mostlike" name="mostlike">
+        <option disabled value>Select an option</option>
+        <option value="">Football</option>
+        <option value="">Athletics</option>
+        <option value="">Box</option>
+        <option value="">Swimming</option>
+      </select>
+    </div>
+   </div>
+   <div class="rowTab">
+    <div class="labels">
+     <label id="userRating" for="userRating">Things that you like most in sport</label>
+    </div>
+    <div class="rightTab">
+      <ul id="preferences" sytle="list-style: none;">
+        <li class="checkbox"> <label><input name="prefer" value="1" type="checkbox" class="userRatings"> Challenges</label> </li>
+        <li class="checkbox"> <label><input name="prefer" value="2" type="checkbox" class="userRatings"> Teamplay</label> </li>
+        <li class="checkbox"> <label><input name="prefer" value="3" type="checkbox" class="userRatings"> Competition</label> </li>
+        <li class="checkbox"> <label><input name="prefer" value="4" type="checkbox" class="userRatings"> Goals</label> </li>
+        <li class="checkbox"> <label><input name="prefer" value="5" type="checkbox" class="userRatings"> Training</label> </li>
+        <li class="checkbox"> <label><input name="prefer" value="6" type="checkbox" class="userRatings"> Watching it</label> </li>
+      </ul>
+    </div>
+   </div>
+   <div class="rowTab">
+    <div class="labels">
+     <label id="mostlike" for="mostlike">What sport are you interested in?</label>
+    </div>
+    <div class="rightTab">
+      <textarea id="comments" class="input-field"  name="comment" placeholder="Enter your comment here..."></textarea>
+    </div>
+   </div>
+   <button type="submit" id="submit">Submit</button>
 
-    You could've noticed there is a link to Roboto font in the head.
-    You can use it in css by typing font-family: Roboto, sans-serif;
-    and you can customize it by using font-weight (400, 500 etc. - numbers in the link tag)
-
-    Good luck and have fun!
-  -->
-   <script src="script.js"></script>
+ </form>
+</div>
 </body>
-</html>
-
-
